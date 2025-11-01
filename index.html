@@ -3,134 +3,57 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meet Banthia | Portfolio</title>
+  <title>MeetB</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <style>
     html { scroll-behavior: smooth; }
+    iframe {
+      width: 100%;
+      height: 100vh;
+      border: none;
+    }
   </style>
 </head>
-<body class="bg-white text-gray-900">
 
-  <!-- Navbar -->
-  <nav class="fixed w-full bg-white border-b border-gray-200 z-50">
-    <div class="max-w-5xl mx-auto px-6 py-3 flex justify-between items-center">
-      <a href="#home" class="font-semibold text-lg">Meet Banthia</a>
-      <div class="space-x-5 text-sm">
-        <a href="#about" class="hover:text-indigo-600">About</a>
-        <a href="#experience" class="hover:text-indigo-600">Experience</a>
-        <a href="#research" class="hover:text-indigo-600">Research</a>
-        <a href="#coursework" class="hover:text-indigo-600">Coursework</a>
-        <a href="#projects" class="hover:text-indigo-600">Projects</a>
-        <a href="#skills" class="hover:text-indigo-600">Skills</a>
-        <a href="#achievements" class="hover:text-indigo-600">Achievements</a>
-        <a href="#contact" class="hover:text-indigo-600">Contact</a>
-      </div>
+<body class="bg-gray-50 text-gray-900">
+
+  <!-- Intro Section -->
+  <section id="intro" class="flex flex-col md:flex-row items-center justify-center min-h-screen px-8 py-12 max-w-6xl mx-auto space-y-10 md:space-y-0 md:space-x-12">
+    
+    <!-- Left: Profile Image -->
+    <div class="flex-shrink-0">
+      <img src="./image2.jpeg" alt="Meet Banthia" class="w-80 h-96 rounded-2xl shadow-2xl object-cover">
+      <p>*2015</p>
     </div>
-  </nav>
+    
+    <!-- Right: About -->
+    <div class="max-w-xl text-center md:text-left">
+      <h1 class="text-5xl font-bold mb-4">Meet Banthia</h1>
+      <p class="text-2xl text-blue-700 mb-4">First Year Student<br>MSCS @ Courant Institute of Mathematical Sciences</p>
+      <p class="text-2s text-red-700 mb-4">* Havent updated all the details. Scroll down to find my resume.<br>Last Edited : Nov 1, 2025.</p>
+      <p class="text-2xl text-gray-700 mb-4">What am I doing currently?</p>
+      <p class="text-xl text-gray-700 leading-relaxed">
+        I am currently working on making my own chess engine, possible beat Google's alphazero(no thats not happening anytime soon!) and use parallelisation techniques to find speedup. I'm having difficulty finding non-trivial parallelism in apha-beta algo. If anyone has any clue, hit me up. I'm gonna work on this for next 2-3 months i believe.
+        <br>Apart from this I'm also working(more like learning currently, this field is amazing) on Gaussian Splatting for 3D rendering. This is going to take a lot of time and I will stick on this for atleast one year now.
+        <br>I'm mostly interested to work in domain of ML Systems, and maybe parallel computing if I really like the idea. You can always reach out to me and I'm happy to work together. <span class ="text-red-500">I am also looking for research internships in ML Systems/Parallel Computing domain for summer 2026.</span>
+      </p>
 
-  <!-- Hero -->
-  <section id="home" class="h-screen flex flex-col justify-center items-center text-center">
-    <img src="./profile.jpeg" alt="Meet Banthia" class="w-40 h-40 rounded-full shadow mb-4 object-cover">
-    <h1 class="text-4xl font-bold">Meet Banthia</h1>
-    <p class="mt-3 text-lg text-gray-600">CS Grad Student @ NYU Courant | ML Systems and Networks</p>
-    <div class="mt-4 space-x-4 text-sm">
-      <a href="https://github.com/meetbanthia" target="_blank" class="text-indigo-600 underline">GitHub</a>
-      <a href="https://www.linkedin.com/in/meet-banthia-a77980201/" target="_blank" class="text-indigo-600 underline">LinkedIn</a>
-      <a href="mailto:meetbanthia0304@gmail.com" class="text-indigo-600 underline">Email</a>
+      <div class="mt-6 space-x-6 text-lg">
+        <a href="https://github.com/meetbanthia" target="_blank" class="text-indigo-600 underline">GitHub</a>
+        <a href="https://www.linkedin.com/in/meet-banthia-a77980201/" target="_blank" class="text-indigo-600 underline">LinkedIn</a>
+        <a href="mailto:meetbanthia0304@gmail.com" class="text-indigo-600 underline">Email</a>
+      </div>
     </div>
   </section>
 
-  <main class="max-w-4xl mx-auto px-6 space-y-16 py-16">
-
-    <!-- About -->
-    <section id="about">
-      <h2 class="text-2xl font-semibold mb-2">About</h2>
-      <p>
-        I’m a Master’s student in Computer Science at New York University (Courant Institute), with a strong background in systems, networks, and machine learning. 
-        My research interests lie in computer networks, security, and ML systems.
-      </p>
-    </section>
-
-    <!-- Experience -->
-    <section id="experience">
-      <h2 class="text-2xl font-semibold mb-2">Experience</h2>
-      <div class="space-y-4">
-        <div>
-          <h3 class="font-bold">Oracle – Server Technology Intern</h3>
-          <p class="text-sm text-gray-600">May 2024 – Jul 2024</p>
-          <p>Built a CD/CD pipeline for Cloud Platform Services, automated triggers, and enforced quality gates with integrated testing.</p>
-        </div>
-        <div>
-          <h3 class="font-bold">HALE Lab – NLP Intern</h3>
-          <p class="text-sm text-gray-600">May 2023 – Aug 2023</p>
-          <p>Worked on legal judgment summarization: created datasets, designed acronym expansion algorithms, and benchmarked models like T5, LLaMA, Gemini.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Research -->
-    <section id="research">
-      <h2 class="text-2xl font-semibold mb-2">Research Interests</h2>
-      <ul class="list-disc ml-6">
-        <li>Networks and systems security</li>
-        <li>ML Systems and optimization</li>
-        <li>Cloud networking and distributed systems</li>
-        <li>Email and communication infrastructure security</li>
-      </ul>
-    </section>
-
-    <!-- Coursework -->
-    <section id="coursework">
-      <h2 class="text-2xl font-semibold mb-2">Coursework</h2>
-      <p>Honors Analysis of Algorithms, Programming Parallel Algorithms, Computer Networks, Wireless Networks, Cloud Computing, Cloud Networking, Digital Image Processing, OS, DBMS, Compiler Design, Approximation Algorithms.</p>
-    </section>
-
-    <!-- Projects -->
-    <section id="projects">
-      <h2 class="text-2xl font-semibold mb-2">Projects</h2>
-      <div class="space-y-4">
-        <div>
-          <h3 class="font-bold">
-            <a href="https://github.com/meetbanthia/TwoDkSupplier" target="_blank" class="text-indigo-600 underline">TwoDkSup 3 Approximation Algorithm</a>
-          </h3>
-          <p>Implemented a 3-approximation algorithm for the 2-Dynamic k-Supplier problem using flow networks and Gurobi optimization.</p>
-        </div>
-        <div>
-          <h3 class="font-bold">Dual Proxy Project</h3>
-          <p>Designed and deployed secure dual proxy systems, worked with TLS protocols and OpenSSL, and solved compatibility issues.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Skills -->
-    <section id="skills">
-      <h2 class="text-2xl font-semibold mb-2">Technical Skills</h2>
-      <p><strong>Languages:</strong> C/C++, Rust, Java, Python, SQL</p>
-      <p><strong>Tools:</strong> Git, Jenkins, Docker, Postman</p>
-      <p><strong>ML:</strong> Scikit-learn, Pandas, NLTK, Keras, TensorFlow, PyTorch</p>
-    </section>
-
-    <!-- Achievements -->
-    <section id="achievements">
-      <h2 class="text-2xl font-semibold mb-2">Achievements</h2>
-      <ul class="list-disc ml-6">
-        <li>All India Rank 1117 in JEE Mains (1.2M+ candidates)</li>
-        <li>All India Rank 2697 in JEE Advanced (200K+ candidates)</li>
-        <li>1st place in INTER NIT Table Tennis (2022-23 & 2023-24)</li>
-      </ul>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact">
-      <h2 class="text-2xl font-semibold mb-2">Contact</h2>
-      <p>📧 <a href="mailto:meetbanthia0304@gmail.com" class="text-indigo-600 underline">meetbanthia0304@gmail.com</a></p>
-      <p>🔗 <a href="https://www.linkedin.com/in/meet-banthia-a77980201/" target="_blank" class="text-indigo-600 underline">LinkedIn</a> | <a href="https://github.com/meetbanthia" target="_blank" class="text-indigo-600 underline">GitHub</a></p>
-    </section>
-
-  </main>
+  <!-- Resume Section -->
+  <section id="resume" class="max-w-6xl mx-auto py-16 px-6">
+    <h2 class="text-4xl font-semibold text-center mb-8">Resume</h2>
+    <iframe src="./resume_meet_new.pdf"></iframe>
+  </section>
 
   <!-- Footer -->
-  <footer class="border-t border-gray-200 text-center p-4 mt-10 text-sm text-gray-600">
+  <footer class="border-t border-gray-200 text-center p-6 mt-10 text-lg text-gray-600">
     © 2025 Meet Banthia
   </footer>
 
