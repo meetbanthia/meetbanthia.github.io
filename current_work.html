@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Current Work — Meet Banthia</title>
-  <link rel="icon" href="favicon.png" type="image/png">
+  <title>Current Projects</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 
@@ -18,21 +18,23 @@
     </h2>
     <p class="text-xl leading-relaxed mb-6">
       I've done some background study of NeRFs and their method for view synthesis.
-      I've so far finsihed understanding these papers - <a href="https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/3d_gaussian_splatting_low.pdf" style="color: blue; font-style: italic;">3DGS</a> and <a href="https://arxiv.org/abs/2505.24796" style="color: blue; font-style: italic;">TC-GS</a>, including maths involved and It's actually not that complex as it feels like.<br> I'm currently trying to run Tensor Core Implementation and trying to profile individual kernel performances required in the entire pipeline.
+      I've so far finsihed understanding several reseach papers, It's actually not that complex as it feels like.<br> I'm currently trying to run Tensor Core Implementation and trying to profile individual kernel performances required in the entire pipeline.
       My goal is spot some key bottlenecks in this pipeline and try to optimise the corresponding kernels.
+      <br><br>Research Papers Read :
+    <br>1. 3D Gaussian Splatting for Real-Time Radiance Field Rendering <a href="https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/" style="color: blue;">[link]</a> </ul>
+    <br>2. TC-GS: A Faster Gaussian Splatting Module Utilizing Tensor Cores <a href="https://arxiv.org/abs/2505.24796" style="color: blue;">[link]</a></ul>
+    <br>3. CLM: Removing the GPU Memory Barrier for 3D Gaussian Splatting <a href="https://arxiv.org/abs/2511.04951" style="color: blue;">[link]</a><br>I only had access to consumer grade GPU (RTX 2080 Ti), and thus it was difficult to run 3DGS model. Thus I read about CLM(similar to zero-offload), which just needs 1 consumer grade GPU and it works by offloading Gaussians to CPU and just load gaussians when necessary. There are various issues with the naive approach, paper discusses in detail on the design and various optimizations in this methodology. I really enjoyed reading this paper.</ul>
     </p>
-
     <br>
 
     <h2 class="text-2xl text-blue-700 leading-relaxed mb-6">
-      ForkAndMove : Chess Engine with Parallel Aplha-Beta Algorithm <a class="text-black-700" href="https://github.com/meetbanthia/ForkAndMove">[Code]</a>
+      ForkAndMove : Chess Engine with Parallel Alpha-Beta Algorithm <a href="https://github.com/meetbanthia/ForkAndMove" style="color: black;">[Code]</a>
     </h2>
 
     <p class="text-xl leading-relaxed mb-6">
       Bitwise operators are crazy!<br>
-      I'm building my own chess engine from scratch. It's a fun project which uses bitmaps for efficient coomputation of chess moves and board evaluation using just bitwise operators.
-      I've began to realise it is not as easy as I thought it would be. Rules like en-passant and castling makes it a bit complicated. <br>I've so far implemented bitmaps implementation of board representation, board evaluation, move generators. My next goal is to write an efficient parallel implementation of widely used aplha-beta search algorithm. I have not found any OpenMP based effcient implementation of this as this algorithm is inherently sequential. 
-      <br>I've got few ideas to proceed with like use of beam search, parallely computing nodes upto certain plie then check values of aplha and beta and maybe resume computation.
+      I'm building my own chess engine from scratch. It's a fun project which uses bitmaps for efficient computation of chess moves and board evaluation using just bitwise operators.
+      I've began to realise it is not as easy as I thought it would be. Rules like en-passant and castling makes it a bit complicated. <br>So far, I have implemented a bitmap-based board representation, board evaluation functions, and efficient move generators. I have also developed an optimized parallel version of the alpha-beta search algorithm. Although alpha-beta is fundamentally sequential, extensive research has been done over the years to parallelize it. One of the most recognized approaches is Principal Variation Search (PVS), which we have also implemented. There is still significant room for further performance enhancements, depending on factors such as board representation, system architecture, and especially the quality of move ordering—an area we have not yet addressed and plan to focus on next. Additionally, we intend to experiment with different algorithmic variations, such as searching the first two child nodes instead of just one, and then comparing their performance with the current implementation.
       <br>I'm implementing in <a href="https://github.com/MPLLang/mpl" style="color: blue;">MaPLe</a>, a Standard ML based functional language for provably efficient and safe multicore parallelism.
     </p>
 
