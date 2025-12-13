@@ -4,17 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MB's Personal Website</title>
-  <!-- Favicon -->
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <style>
     html { scroll-behavior: smooth; }
-    iframe {
-      width: 100%;
-      height: 100vh;
-      border: none;
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(10px); }
+    }
+    .scroll-indicator {
+      animation: bounce 1.5s ease-in-out infinite;
     }
   </style>
 </head>
@@ -22,7 +23,7 @@
 <body class="bg-gray-50 text-gray-900" style="font-family:monospace;">
 
   <!-- Intro Section -->
-  <section id="intro" class="flex flex-col md:flex-row items-center justify-center min-h-screen px-8 py-12 max-w-6xl mx-auto space-y-10 md:space-y-0 md:space-x-12">
+  <section id="intro" class="relative flex flex-col md:flex-row items-center justify-center min-h-screen px-8 py-12 max-w-6xl mx-auto space-y-10 md:space-y-0 md:space-x-12">
     
     <!-- Left: Profile Image -->
     <div class="flex-shrink-0">
@@ -35,41 +36,86 @@
       <h1 class="text-5xl font-bold mb-4">Meet Banthia</h1>
       <p class="text-2xl text-gray-500 mb-4">MSCS @ Courant Institute of Mathematical Sciences</p>
       <p class="text-5xl text-gray-700 mb-4">Bio</p>
-      <!-- <p class="text-xl text-gray-700 leading-relaxed">
-        I'm working(more like learning currently, this field is amazing) on Gaussian Splatting for 3D rendering. This is going to take a lot of time and I will stick on this for atleast one year now.
-        <br>Aprt from this I am also working on making my own <a href="https://github.com/meetbanthia/ForkAndMove" target="_blank" class="text-indigo-600 underline">chess engine</a>, possibly beat Google's alphazero(no thats not happening anytime soon!) and use parallelisation techniques to find speedup. I'm having difficulty finding non-trivial parallelism in apha-beta algo. If anyone has any clue, hit me up. I'm gonna work on this for next 2-3 months i believe.
-        <br>I'm mostly interested to work in domain of ML Systems, and maybe parallel computing if I really like the idea. You can always reach out to me and I'm happy to work together. <span class ="text-red-500">I am also looking for research internships in ML Systems/Parallel Computing domain for summer 2026.</span>
-      </p> -->
 
       <p class="text-xl text-gray-700 leading-relaxed">
           I'm MSCS Graduate Student and Research Assistant under Professor <a href="https://jinyangli.github.io/" class="underline">Jinyang Li</a> at NYU Courant and before that I did my undergraduate studies from NIT Karnataka Surathkal in Computer Science and Engineering.
-          <br><br
+          <br><br>
           <a class="text-blue-500">Machine Learning Systems</a> and bit of Parallel Computing and Distributed Systems is my core research direction.  
           If you're working in this area and down to chat, collaborate, or point me toward cool problems...please reach out.
         <br><br>
-        <a href="current_work.html" class="text-black-700 italic font-semibold underline" style="font-size:x-large;">
-          Current Projects
-        </a>
-        <br>
-        <a href="resume_meet_1.pdf" class="text-black-700 italic font-semibold underline" style="font-size:x-large;">
-          Resume/ CV  ( ~ Not up to date!)
-        </a>
+        <a href="current_work.html" class="italic font-semibold underline" style="font-size:x-large;">Current Projects</a>
+        <span class="text-gray-400 mx-2">|</span>
+        <a href="resume_meet_1.pdf" class="italic font-semibold underline" style="font-size:x-large;">Resume/CV</a>
       </p>
-      <br>
-      <p class="text-2s text-gray-900">* I am also looking for research internships in ML Systems/Parallel Computing domain for summer 2026 *</p>
 
-      <div class="mt-6 space-x-6 text-lg">
-        <a class="fa fa-github" style="font-size:40px;color:black" href="https://github.com/meetbanthia" target="_blank" class="text-indigo-600 underline"></a>
-        <a class="fa fa-linkedin-square" style="font-size:40px;color:rgba(0, 0, 255, 0.706)" href="https://www.linkedin.com/in/meet-banthia-a77980201/" target="_blank" class="text-indigo-600 underline"></a>
+      <p class="text-sm text-gray-600 mt-6">* I am also looking for research internships in ML Systems/Parallel Computing domain for summer 2026 *</p>
+
+      <div class="mt-6 space-x-6">
+        <a class="fa fa-github" style="font-size:36px;color:black" href="https://github.com/meetbanthia" target="_blank"></a>
+        <a class="fa fa-linkedin-square" style="font-size:36px;color:rgba(0, 0, 255, 0.706)" href="https://www.linkedin.com/in/meet-banthia-a77980201/" target="_blank"></a>
         <a class="material-icons" style="font-size:32px" href="mailto:meetbanthia0304@gmail.com">mail</a>
       </div>
 
-
     </div>
+
+    <!-- Scroll Indicator -->
+    <a href="#experience" class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-gray-400 hover:text-gray-600 scroll-indicator">
+      <span class="material-icons" style="font-size:40px;">expand_more</span>
+    </a>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="max-w-4xl mx-auto py-16 px-6 border-t border-gray-200">
+    <h1 class="text-4xl font-bold mb-10">Experience</h1>
+
+    <h2 class="text-2xl text-black-700 leading-relaxed mb-2">
+      1. <strong>Research Assistant @ NYU Courant</strong>
+    </h2>
+    <p class="text-xl leading-relaxed mb-8">
+      <strong>New York, US</strong><br>
+      Dec 2025 – Present<br><br>
+      Working under Professor <a href="https://jinyangli.github.io/" style="color: blue;">Jinyang Li</a> on ML Systems research.
+    </p>
+
+    <h2 class="text-2xl text-black-700 leading-relaxed mb-2">
+      2. <strong>Server Technology Intern @ Oracle</strong>
+    </h2>
+    <p class="text-xl leading-relaxed mb-8">
+      <strong>Hyderabad, India</strong><br>
+      May 2024 - July 2024<br><br>
+      • Project involved creating a Continuous Delivery/ Continuous Deployment pipeline that would serve as the quality gatekeeper for the Cloud Platform Services and ensure we deliver a high quality, complaint and bug-free set of Cloud services to the SaaS Application teams.<br>
+      • Whenever a new version of services is released in a branch, a pipeline would be triggered that would execute a suite of integrated tests on real-time Preflight(Gamma stage) instance on which the services have been deployed.
+    </p>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education" class="max-w-4xl mx-auto py-16 px-6 border-t border-gray-200">
+    <h1 class="text-4xl font-bold mb-10">Education</h1>
+
+    <h2 class="text-2xl text-black-700 leading-relaxed mb-2">
+      1. NYU Courant Institute of Mathematical Sciences
+    </h2>
+    <p class="text-xl leading-relaxed mb-8">
+      <strong>Master of Science in Computer Science</strong><br>
+      Courant Institute of Mathematical Sciences, New York<br>
+      Sept 2025 – Present<br><br>
+      Coursework:<br>
+      Fall'25 : ML Systems, Honors Analysis of Algorithms, Programming Parallel Algorithms, Programming Languages.<br>
+      Spring'26 : Distributed Systems, Multicore Architecture and Processors, Operating Systems
+    </p>
+
+    <h2 class="text-2xl text-black-700 leading-relaxed mb-2">
+      2. NIT Karnataka, Surathkal
+    </h2>
+    <p class="text-xl leading-relaxed mb-8">
+      <strong>Bachelor of Technology in Computer Science & Engineering</strong><br>
+      National Institute of Technology Karnataka, India<br>
+      Dec 2021 – May 2025
+    </p>
   </section>
 
   <!-- Footer -->
-  <footer class="border-t border-gray-200 text-center p-6 mt-10 text-lg text-gray-600">
+  <footer class="border-t border-gray-200 text-center p-6 text-lg text-gray-600">
     <p class="text-2s text-700 mb-4">* Last Edited : Nov 11, 2025.</p>
     Go all out!
   </footer>
