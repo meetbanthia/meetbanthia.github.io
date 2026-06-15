@@ -5,7 +5,8 @@ body {
 }
 
 a {
-    color: #8C1515;
+    color: #071013;
+    text-decoration: underline;
 }
 
 a:hover {
@@ -14,13 +15,13 @@ a:hover {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    color: #8C1515;
+    color: #071013;
 }
 
 h2 code {
   font-family: Consolas,"courier new";
   /* background-color: #f1f1f1; */
-  background-color:  #8C1515;;
+  background-color:  #071013;;
   color: white;
   padding: 2px;
 }
@@ -52,7 +53,7 @@ h2 code {
 }
 
 .main_color  {
-    color: #8C1515;
+    color: #071013;
 }
 
 .secondary_color {
@@ -102,6 +103,7 @@ h2 code {
 
 .about .socials a {
     margin-left: .6%;
+    text-decoration: none;
 }
 
 .about #blog_logo {
@@ -119,6 +121,24 @@ h2 code {
 
 .course {
     margin-top: 1%;
+}
+
+.current-work {
+    border: 1px solid #cfe3e0;
+    border-left: 4px solid #0f766e;
+    border-radius: 4px;
+    background-color: #f3f9f8;
+    padding: 0.75rem 1rem;
+    margin-top: 0.75rem;
+    margin-bottom: 1.25rem;
+}
+
+.current-work p {
+    margin-bottom: 0;
+}
+
+.current-work .current-work-title {
+    margin-bottom: 0.4rem;
 }
 
 .news {
@@ -175,7 +195,7 @@ h2 code {
     transition-timing-function: ease-in-out;
 
     border-radius: 50%;
-    background-color: #d64933;
+    background-color: #071013;
     color: white;
 }
 
@@ -184,7 +204,7 @@ h2 code {
 }
 
 .projects .project {
-    margin-top: 1.5%;
+    margin-top: 0.2rem;
 }
 
 .project-title {
@@ -200,13 +220,54 @@ h2 code {
     font-family: 'Ubuntu Mono', serif;
     padding: .15%;
 }
+
+details.project > summary.project-header {
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    column-gap: 0.6rem;
+    row-gap: 0.2rem;
+}
+
+details.project > summary.project-header::-webkit-details-marker {
+    display: none;
+}
+
+details.project > summary.project-header::before {
+    content: "▸";
+    color: #071013;
+    font-family: 'Ubuntu Mono', serif;
+    font-size: 0.85em;
+}
+
+details.project[open] > summary.project-header::before {
+    content: "▾";
+}
+
+details.project > summary.project-header .project-date {
+    margin-left: auto;
+}
+
+details.project > summary.project-header .section-2 {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.4rem;
+}
+
+details.project > summary.project-header .section-2 a {
+    padding: 0;
+    margin: 0;
+}
+
 .projects .project .section-2 a:hover {
     transition-property: background-color;
     transition-duration: .2s;
     transition-timing-function: ease-in-out;
 
     border-radius: 50%;
-    background-color: #d64933;
+    background-color: #071013;
     color: white;
 }
 
@@ -223,18 +284,18 @@ h2 code {
 }
 
 .pagination a  {
-    color: #8C1515;
+    color: #071013;
     size: 100%;
 }
 
 .pagination .page_link  {
     font-weight: bold;
-    background-color: #8C1515;
+    background-color: #071013;
 }
 
 .page-item.active .page-link {
     border-color: black;
-    background-color: #8C1515;
+    background-color: #071013;
     font-weight: bold;
     color: white;
 }
@@ -246,7 +307,7 @@ h2 code {
 .tags_navigation .tag {
     font-family: 'Ubuntu Mono', serif;
     padding: .15%;
-    background-color: #8C1515;
+    background-color: #071013;
     color: aliceblue;
     padding-left: .5%;
     padding-right: .5%;
@@ -264,7 +325,7 @@ h2 code {
 .blog_nav_bar .item {
     font-family: 'Ubuntu Mono', serif;
     padding: .15%;
-    background-color: #8C1515;
+    background-color: #071013;
     color: aliceblue;
     padding-left: .5%;
     padding-right: .5%;
