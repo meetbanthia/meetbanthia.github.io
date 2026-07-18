@@ -50,7 +50,7 @@
 
 <div class="row w-100 justify-content-center">
     <div class="rounded-circle d-flex justify-content-center align-items-center" style="width:200px;height:200px;margin-top:70px;overflow:hidden;">
-        <img src="images/profile.jpg" alt="profile_picture" id="profile_picture" style="height:240px;width:auto;object-fit:cover;" />
+        <img src="images/profile.jpg" alt="profile_picture" id="profile_picture" />
     </div>
 </div>
 
@@ -66,8 +66,8 @@
     <div class="w-100 text-center">
 
         <div class="d-flex justify-content-center" id="title-name">
-            <span class="main_color" id="title" style="white-space:nowrap;">MSCS & Research Assistant,&nbsp;</span>
-            <span id="name" class="text-muted" style="white-space:nowrap;">NYU Courant Institute</span>
+            <span class="main_color" id="title" style="white-space:nowrap;">Master's in CS,&nbsp;</span>
+            <span id="name" class="text-muted" style="white-space:nowrap;">NYU Courant</span>
         </div>
         <div class="row w-100 justify-content-center text-muted" id="email">
             meetbanthia0304[at]gmail[dot]com
@@ -128,10 +128,10 @@
 
 <div class="introduction row w-100 text-justify">
     <div class="col w-100">
-        <p>I&rsquo;m an MSCS Graduate Student and Research Assistant under Professor <a href="https://jinyangli.github.io/">Jinyang Li</a> at <a href="https://cims.nyu.edu/dynamic/">NYU Courant</a>. Previously, I did my undergradute studies from <a href="https://www.nitk.ac.in/">National Institute of Technology Karnataka Surathkal, India</a> in CS and have worked at Oracle as a Server Technology Intern.</p>
+        <p>I&rsquo;m an MSCS Graduate Student and Research Assistant advised by Professor <a href="https://jinyangli.github.io/">Jinyang Li</a> at <a href="https://cims.nyu.edu/dynamic/">NYU Courant</a>. Previously, I did my undergradute studies from <a href="https://www.nitk.ac.in/">National Institute of Technology Karnataka Surathkal, India</a> in CS and have worked at Oracle as a Server Technology Intern.</p>
 <div class="current-work">
-    <p class="current-work-title"><strong>What am i currently working on?</strong> <small>(as of May 2026)</small></p>
-    <p><strong>3D Gaussian Ray Tracing Research @ NYU Courant Working under Professor Jinyang Li : Over the past several months I experimented extensively with the 3DGRT pipeline with parameters like gaussian count and bounding box primitive type, profiling rendering kernels, and studying tradeoffs such as the BVH build time vs. rendering time discussion in the 3DGRT paper, and built a deep understanding of where performance is actually lost. Out of this exploration came an original optimization idea of my own, and I am now in the implementation phase of that proposal, targeting bottlenecks that the existing literature does not directly address. <br><br> Orthoganally I've also developed interest in ML Compilers and have been studying about current methods and solutions of existing limitations proposed by our lab members.</p>
+    <p class="current-work-title"><strong>What am i currently working on?</strong> <small>(as of July 2026)</small></p>
+    <p><b><i>Systems for 3D Gaussian Ray Tracing:</i></b> Main objective of this research is to reduce the training time of <a href="https://gaussiantracer.github.io/">3DGRT</a>. My work focuses mainly on reducing rendering time by redesigning rendering algorithm(keeping exact correntness) to get benefit from systems level optimizations on rendering kernels.</p>
 </div>
     </div>
 </div>
@@ -175,8 +175,10 @@
     
     <div class="row">
         <div class="course col">
+            <img src="images/nyu.png" alt="NYU logo" class="institution-logo" />
+            <div class="course-body">
             <div class="institution_dates row">
-                <div class="institution col" id="institution_title">
+                <div class="institution col institution_title">
                     NYU Courant Institute of Mathematical Sciences
                 </div>
                 <div class="main_color dates col-md-auto  justify-content-end">
@@ -196,8 +198,9 @@
             
             <div class="other_info row text-muted">
                 <div class="col">
-                    GPA: 3.93/4.00 | Fall&#39;25: ML Systems, Honors Algo, Parallel Algo | Spring&#39;26: Distributed Systems, Multicore Processors, OS
+                    GPA: 3.93/4.00 <br> Fall&#39;25: ML Systems, Honors Algo, Parallel Algo <br> Spring&#39;26: Distributed Systems, Multicore Processors, OS
                 </div>
+            </div>
             </div>
             
         </div>
@@ -205,8 +208,10 @@
     
     <div class="row">
         <div class="course col">
+            <img src="images/nitk.png" alt="NIT Karnataka logo" class="institution-logo" />
+            <div class="course-body">
             <div class="institution_dates row">
-                <div class="institution col" id="institution_title">
+                <div class="institution col institution_title">
                     NIT Karnataka, Surathkal <a href="nitk-photo.html" target="_blank" class="main_color" style="font-size:0.8em;">[some photos]</a>
                 </div>
                 <div class="main_color dates col-md-auto  justify-content-end">
@@ -229,6 +234,7 @@
                 <div class="col">
                     GPA: 8.51/10.00
                 </div>
+            </div>
             </div>
             
         </div>
@@ -312,7 +318,7 @@
                 
 
                 
-                Started as <strong>Research Assistant</strong> under Professor Jinyang Li</a> at NYU Courant, working on ML Systems research.
+                Started as <strong>Research Assistant</strong> with Professor Jinyang Li</a> at NYU Courant, working on ML Systems research.
                 
 
                 
@@ -352,10 +358,11 @@
             <div class="col w-100">
                 
                 <h3 class="row  w-100 section-title main_color"> Projects </h3>
+                <br>
                 
 
                 
-                <h6 class="row w-100 section-subtitle  text-muted"> See my&nbsp;<a href="https://github.com/meetbanthia">GitHub</a>&nbsp;for the complete list.</h6>
+                <!-- <h6 class="row w-100 section-subtitle  text-muted"> See my&nbsp;<a href="https://github.com/meetbanthia">GitHub</a>&nbsp;for the complete list.</h6> -->
                 
             </div>
         </div>
@@ -434,6 +441,7 @@
                 <h3 class="row  w-100 section-title main_color"> Blogs </h3>
             </div>
         </div>
+        <br>
 
         <div class="row w-100">
             <div class="col w-100">
@@ -441,7 +449,7 @@
                     <div class="d-flex justify-content-between align-items-baseline flex-wrap">
                         <h5 class="mb-1">
                             <a href="https://medium.com/@meetbanthia0304/understanding-easy-induction-used-in-lemma3-of-flp-paper-28fe76987e5b" target="_blank" rel="noopener noreferrer">
-                                Understanding 3 lines of lemma3 in FLP Impossibility paper
+                                1. Understanding 3 lines of lemma3 in FLP Impossibility paper
                             </a>
                         </h5>
                         <span class="text-muted" style="font-size:0.85em;">Medium</span>
