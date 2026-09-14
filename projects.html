@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Ubuntu+Mono">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Meet Banthia | Projects</title>
+</head>
+<body class="subpage container d-flex flex-column min-vh-100">
+<nav class="site-nav" aria-label="Primary navigation">
+    <a href="index.html">About</a>
+    <a href="interests.html">Interests</a>
+    <a href="academia.html">Academia</a>
+    <a href="news.html">News</a>
+    <a href="projects.html">Projects</a>
+    <a href="blogs.html">Blogs</a>
+</nav>
+<main>
+    <h1>Projects</h1>
+    <details class="standalone-project">
+        <summary>
+            <span>ForkAndMove: Parallel Chess Engine in MPL</span>
+            <span class="project-links">
+                <a href="https://github.com/meetbanthia/ForkAndMove" target="_blank" rel="noopener noreferrer">code</a>
+                <a href="https://drive.google.com/file/d/1vrW8i74RPwY3Fnb-JM4iOr6xL8_6yTBl/view?usp=sharing" target="_blank" rel="noopener noreferrer">report</a>
+            </span>
+            <time>Oct 2025 – Dec 2025</time>
+        </summary>
+        <div class="project-copy">
+            <p>I built my own chess engine from scratch as a fun project. The engine used a bitmap-based board representation to enable fast move generation and board evaluation through bitwise operations. While bitboards made many things elegant and efficient, handling chess-specific rules like castling, en passant, and sliding-piece move generation made it a bit inconvenient to use bitboards.</p>
+            <p>Beyond the core board representation and evaluation logic, the main focus of this project was game-tree search. I implemented minimax, alpha-beta pruning, and an optimized parallel version of alpha-beta using Principal Variation Search (PVS). Although alpha-beta is fundamentally sequential due to left-to-right dependencies, PVS allowed meaningful parallelism by first exploring the leftmost branch sequentially to establish tight alpha-beta bounds, and then searching the remaining branches in parallel using these bounds. This significantly improved pruning effectiveness while still exploiting multicore parallelism.</p>
+            <p>The engine was implemented in <a href="https://github.com/MPLLang/mpl">MaPLe</a>, a Standard ML-based functional language designed for provably efficient and safe multicore parallelism. Parallelism was expressed using high-level primitives such as reduce, which we used to combine results from parallel alpha-beta searches in a stable and deterministic way. In addition to PVS, I also implemented semi-parallel and fully parallel minimax variants to compare performance trade-offs.</p>
+            <p>We experimented with parallelizing move generation as well, but found that for chess especially for sliding pieces like rooks, bishops, and queens, move generation was inherently sequential and offered limited parallel benefit relative to scheduling overhead. Instead, performance gains primarily came from search optimizations such as lazy game-tree generation, where successor states were generated only when required rather than eagerly expanding the entire subtree.</p>
+            <p>Sequential alpha-beta consistently outperformed parallel minimax, while parallel PVS outperformed both, especially as the number of processors increased. There was still significant room for improvement, particularly in move ordering, which had a major impact on pruning efficiency.</p>
+        </div>
+    </details>
+    <details class="standalone-project">
+        <summary>
+            <span>Analyse Tensor-Core-Based Gaussian Splatting CUDA Kernel</span>
+            <time>Oct 2025 – Dec 2025</time>
+        </summary>
+        <div class="project-copy">
+            <p>I did some background study of NeRFs and their method for view synthesis. After understanding several research papers, I ran the Tensor Core implementation and profiled individual kernel performance across the pipeline. My goal was to spot key bottlenecks in this pipeline.</p>
+            <p><strong>Research papers:</strong></p>
+            <ol>
+                <li><a href="https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/">3D Gaussian Splatting for Real-Time Radiance Field Rendering</a></li>
+                <li><a href="https://arxiv.org/abs/2505.24796">TC-GS: A Faster Gaussian Splatting Module Utilizing Tensor Cores</a></li>
+                <li><a href="https://arxiv.org/abs/2511.04951">CLM: Removing the GPU Memory Barrier for 3D Gaussian Splatting</a></li>
+            </ol>
+            <p>I only had access to a consumer-grade GPU (RTX 2080 Ti), which made it difficult to run the full 3DGS model. I read about CLM (similar to ZeRO-Offload), which works on a single consumer-grade GPU by offloading Gaussians to the CPU and loading them when necessary. The paper discusses various issues with the naive approach and presents detailed design and optimizations.</p>
+        </div>
+    </details>
+</main>
+</body>
+</html>
