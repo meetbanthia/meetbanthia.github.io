@@ -1,0 +1,548 @@
+html {
+    scrollbar-gutter: stable;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #ffffff;
+    color: #38332d;
+    overflow-x: hidden;
+    line-height: 1.7;
+}
+
+a {
+    color: #315f91;
+    text-decoration-color: #8aa0b8;
+    text-underline-offset: 0.18em;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #201d1a;
+}
+
+h1,
+h2 {
+    color: #201d1a;
+}
+
+.w-100 {
+    margin: auto;
+}
+
+.main_color {
+    color: #24201c;
+}
+
+.text-muted {
+    color: #6d655c !important;
+}
+
+#profile_picture {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 20%;
+}
+
+.about .affiliations #title {
+    padding-right: .5%;
+}
+
+.about .affiliations #name {
+    padding-right: .5%;
+}
+
+.about #email {
+    font-family: 'Ubuntu Mono', serif;
+    margin: auto;
+}
+
+.about .socials {
+    font-size: small;
+    margin-bottom: 1%;
+    margin-top: 1%;
+}
+
+.about .socials a {
+    margin-left: .6%;
+    text-decoration: none;
+}
+
+.home-page.container {
+    width: 100%;
+    max-width: none;
+    margin-left: 0;
+    margin-right: auto;
+    padding: 0 1.5rem 2rem;
+}
+
+.home-page .row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.home-page > .row,
+.home-page > .row:first-of-type > .col {
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.home-page .about:first-child {
+    max-width: none;
+    margin: 0 0 1.5rem;
+}
+
+.home-page .profile-layout {
+    display: grid;
+    grid-template-columns: 170px minmax(0, 1fr);
+    gap: 3rem;
+    align-items: start;
+    width: 100%;
+    padding-top: 2.75rem;
+}
+
+.home-page .profile-photo {
+    width: 170px;
+    height: 170px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.home-page #profile_picture {
+    border: 1px solid #cbd5e1;
+}
+
+.home-page #full_name {
+    justify-content: flex-start !important;
+    margin-top: 0;
+    color: #201d1a;
+    font-size: clamp(1.9rem, 5vw, 2.5rem);
+    font-weight: 650;
+    letter-spacing: -0.025em;
+}
+
+.home-page .affiliations {
+    justify-content: flex-start !important;
+    margin-top: 0.3rem;
+}
+
+.home-page .affiliations > div,
+.home-page #title-name {
+    justify-content: flex-start !important;
+    text-align: left !important;
+}
+
+.home-page #title {
+    color: #4f4942;
+}
+
+.home-page #email {
+    justify-content: flex-start !important;
+    margin-top: 0.25rem;
+    color: #746b62 !important;
+    font-size: 0.9rem;
+}
+
+.home-page .socials {
+    justify-content: flex-start !important;
+    margin: 1rem 0 2rem;
+}
+
+.home-page .socials > .row {
+    justify-content: flex-start !important;
+}
+
+.home-page .socials a {
+    display: inline-grid;
+    place-items: center;
+    flex: 0 0 2rem;
+    box-sizing: border-box;
+    width: 2rem;
+    height: 2rem;
+    padding: 0;
+    margin: 0 0.55rem;
+    border: 1px solid currentColor;
+    border-radius: 50%;
+    color: #000;
+    line-height: 1;
+}
+
+.home-page .socials a:hover {
+    color: #000;
+}
+
+.home-page .socials svg {
+    display: block;
+    width: 1.15rem;
+    height: 1.15rem;
+}
+
+.home-page .academic_icons_customize {
+    display: inline-grid;
+    place-items: center;
+    width: 1.2rem;
+    height: 1.2rem;
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+.home-page .introduction {
+    margin-top: 2rem;
+    color: #38332d;
+    font-size: 1rem;
+    line-height: 1.8;
+    text-align: left;
+}
+
+.home-page .introduction a {
+    color: #315f91;
+}
+
+.home-page .introduction a:hover {
+    color: #244a73;
+}
+
+.home-page .introduction > .col {
+    padding: 0;
+}
+
+.home-page .interests-summary {
+    color: #000;
+    font-weight: 400;
+}
+
+.home-page .section-title {
+    margin: 0 0 1rem;
+    color: #24201c;
+    font-size: 1.35rem;
+}
+
+.home-box {
+    flex-shrink: 0;
+    padding: 1.25rem;
+    margin: 0 0 1.5rem;
+    border: 1px solid #d7e0eb;
+    border-radius: 8px;
+    scroll-margin-top: 1.5rem;
+}
+
+.home-page .home-box .section-title {
+    margin-bottom: 0.5rem;
+}
+
+.box-scroll {
+    max-height: 14rem;
+    overflow-y: auto;
+    scrollbar-gutter: stable;
+}
+
+.box-scroll:focus-visible {
+    outline: 2px solid #315f91;
+    outline-offset: 3px;
+}
+
+.home-news .news-list {
+    margin: 0;
+}
+
+.home-news .news-list li:last-child {
+    border-bottom: 0;
+}
+
+@media (max-width: 767px) {
+    .home-page.container {
+        padding-right: 1.1rem;
+        padding-left: 1.1rem;
+    }
+
+    .home-page .profile-layout {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding-top: 3.5rem;
+    }
+
+    .home-page .profile-photo {
+        width: 145px;
+        height: 145px;
+    }
+}
+
+.site-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem 1.25rem;
+}
+
+.site-nav a {
+    color: #6f665d;
+    text-decoration: none;
+}
+
+.site-nav a:hover,
+.site-nav a[aria-current="page"] {
+    color: #201d1a;
+}
+
+.home-nav,
+.subpage .site-nav {
+    justify-content: flex-start;
+    width: 100%;
+    max-width: none;
+    padding-top: 1.75rem;
+    margin: 0;
+}
+
+.home-nav::after,
+.subpage .site-nav::after {
+    height: 1px;
+    flex: 1 1 120px;
+    align-self: center;
+    background-color: #d7e0eb;
+    content: "";
+}
+
+.subpage.container {
+    width: 100%;
+    max-width: none;
+    padding: 0 1.5rem 2rem;
+}
+
+.subpage .site-nav {
+    margin-bottom: 4rem;
+}
+
+.subpage main {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+}
+
+.subpage h1 {
+    margin-bottom: 2rem;
+    font-size: clamp(1.8rem, 5vw, 2.35rem);
+    font-weight: 650;
+    letter-spacing: -0.025em;
+}
+
+.subpage h2 {
+    margin: 0;
+    font-size: 1.05rem;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.simple-list {
+    padding-left: 1.25rem;
+}
+
+.simple-list li {
+    padding: 0.3rem 0;
+}
+
+.education-entry {
+    display: grid;
+    grid-template-columns: 56px minmax(0, 1fr);
+    gap: 1.25rem;
+    padding: 0 0 2rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #d7e0eb;
+}
+
+.education-entry .institution-logo {
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+}
+
+.entry-heading {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.entry-heading span {
+    flex: 0 0 auto;
+    font-size: 0.85rem;
+}
+
+.education-entry p {
+    margin: 0.35rem 0 0;
+}
+
+.news-list {
+    padding: 0;
+    list-style: none;
+}
+
+.news-list li {
+    display: grid;
+    grid-template-columns: 95px minmax(0, 1fr);
+    gap: 1rem;
+    padding: 0.9rem 0;
+    border-bottom: 1px solid #d7e0eb;
+}
+
+.news-list time,
+.standalone-project time {
+    color: #766d63;
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 0.85rem;
+}
+
+.standalone-project {
+    padding: 1.25rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #d7e0eb;
+    border-radius: 8px;
+}
+
+.standalone-project .project-header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    gap: 1rem;
+    align-items: baseline;
+    margin-bottom: 1rem;
+    color: #2a2622;
+}
+
+.standalone-project .project-name {
+    margin: 0;
+    font-size: 1.05rem;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.project-links {
+    display: flex;
+    gap: 0.75rem;
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+.project-copy {
+    max-height: 8.5em;
+    max-height: 5lh;
+    overflow-y: auto;
+    scrollbar-gutter: stable;
+    color: #514a43;
+    line-height: 1.7;
+}
+
+.project-copy > :last-child {
+    margin-bottom: 0;
+}
+
+.project-copy:focus-visible {
+    outline: 2px solid #315f91;
+    outline-offset: 3px;
+}
+
+.blog-entry {
+    margin-bottom: 1.5rem;
+    border: 1px solid #d7e0eb;
+    border-radius: 8px;
+}
+
+.blog-entry .blog-card-link {
+    display: block;
+    padding: clamp(1.25rem, 4vw, 1.75rem);
+    border-radius: inherit;
+    color: inherit;
+    text-decoration: none;
+}
+
+.blog-entry:hover,
+.blog-entry:focus-within {
+    border-color: #8aa0b8;
+}
+
+.blog-card-link:focus-visible {
+    outline: 2px solid #315f91;
+    outline-offset: 3px;
+}
+
+.blog-meta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.5rem 1rem;
+    margin-bottom: 1rem;
+    color: #6c747d;
+    font-size: 0.8rem;
+}
+
+.blog-entry h2 {
+    max-width: 38ch;
+    margin: 0 0 0.85rem;
+    color: #201d1a;
+    font-size: clamp(1.05rem, 2.5vw, 1.2rem);
+    font-weight: 600;
+    line-height: 1.45;
+    letter-spacing: -0.015em;
+}
+
+.blog-card-link:hover h2 {
+    color: #315f91;
+}
+
+.blog-excerpt {
+    margin: 0 0 1.5rem;
+    color: #59616a;
+    line-height: 1.75;
+}
+
+.blog-read-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: #315f91;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+@media (max-width: 600px) {
+    .subpage .site-nav {
+        margin-bottom: 3rem;
+    }
+
+    .entry-heading {
+        display: block;
+    }
+
+    .education-entry {
+        grid-template-columns: 44px minmax(0, 1fr);
+        gap: 0.85rem;
+    }
+
+    .education-entry .institution-logo {
+        width: 44px;
+        height: 44px;
+    }
+
+    .news-list li,
+    .standalone-project .project-header {
+        grid-template-columns: 1fr;
+        gap: 0.25rem;
+    }
+
+    .project-links {
+        grid-row: 3;
+    }
+}
+
+@media (max-width: 767px) {
+    .home-nav,
+    .subpage .site-nav {
+        justify-content: flex-start;
+        column-gap: 0.85rem;
+        row-gap: 0.25rem;
+    }
+
+    .home-nav::after,
+    .subpage .site-nav::after {
+        display: none;
+    }
+}
