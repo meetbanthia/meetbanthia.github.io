@@ -385,7 +385,8 @@ h2 {
 }
 
 .news-list time,
-.standalone-project time {
+.standalone-project time,
+.publication-entry time {
     color: #766d63;
     font-family: 'Ubuntu Mono', monospace;
     font-size: 0.85rem;
@@ -407,15 +408,60 @@ h2 {
     color: #2a2622;
 }
 
-.standalone-project .project-name {
+.standalone-project .project-name,
+.publication-title {
     margin: 0;
     font-size: 1.05rem;
     font-weight: 600;
     line-height: 1.5;
 }
 
+.publication-list {
+    margin: 0;
+    padding-left: 1.6rem;
+}
+
+.publication-list > li {
+    padding-left: 0.35rem;
+    margin-bottom: 1.5rem;
+}
+
+.publication-list > li::marker {
+    color: #2a2622;
+    font-weight: 600;
+}
+
+.publication-header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    gap: 1rem;
+    align-items: baseline;
+}
+
+.publication-authors {
+    margin: 0.35rem 0 0;
+    color: #4f4942;
+    font-size: 0.95rem;
+    font-weight: 400;
+}
+
+.publication-author-self {
+    color: #201d1a;
+    text-decoration: underline;
+    text-underline-offset: 0.18em;
+}
+
+.publication-venue {
+    color: #315f91;
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 0.9rem;
+    font-weight: 400;
+    white-space: nowrap;
+}
+
 .project-links {
     display: flex;
+    align-items: center;
     gap: 0.75rem;
     font-family: 'Ubuntu Mono', monospace;
     font-size: 0.9rem;
@@ -523,7 +569,8 @@ h2 {
     }
 
     .news-list li,
-    .standalone-project .project-header {
+    .standalone-project .project-header,
+    .publication-header {
         grid-template-columns: 1fr;
         gap: 0.25rem;
     }
